@@ -153,4 +153,13 @@ cut(temp, c(-Inf, 0, 10, 20, 30, Inf), right = TRUE,
 lazy_example <- function(greeting = greet()){
   print("greeting")
 }
+
 lazy_example(greet())
+z <- 10
+t <- function(x) {
+  y <- x + z
+}
+a <- t(2)
+
+# If we don't want something in our global environment, we can insert 
+# it in a function and get rid of it from the global.
